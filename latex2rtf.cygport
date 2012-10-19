@@ -1,0 +1,25 @@
+NAME="latex2rtf"
+VERSION=2.3.1
+RELEASE=1
+CATEGORY="Text"
+SUMMARY="Converts LaTeX to RTF"
+DESCRIPTION="atex2rtf is a translator program to convert LaTeX formatted text
+files into Rich Text Format files.  This means that the conversion of a LaTeX
+document to RTF allows anyone with a copy of MS Word to convert LaTeX files to
+MS Word .doc or .docx files."
+HOMEPAGE="http://latex2rtf.sourceforge.net/"
+SRC_URI="mirror://sourceforge/latex2rtf/${NAME}-${VERSION}.tar.gz"
+
+REQUIRES="ghostscript ImageMagick texlive texlive-collection-latex"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake all
+	cygmake -j1 doc
+}
+
+src_install() {
+	cd ${B}
+	cygmake install install-info DESTDIR=${D}/usr
+}
