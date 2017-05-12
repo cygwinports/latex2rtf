@@ -1,5 +1,5 @@
 NAME="latex2rtf"
-VERSION=2.3.12
+VERSION=2.3.15
 RELEASE=1
 CATEGORY="Text"
 SUMMARY="Converts LaTeX to RTF"
