@@ -1,5 +1,5 @@
 NAME="latex2rtf"
-VERSION=2.3.15
+VERSION=2.3.17
 RELEASE=1
 CATEGORY="Text"
 SUMMARY="Converts LaTeX to RTF"
@@ -9,6 +9,7 @@ document to RTF allows anyone with a copy of MS Word to convert LaTeX files to
 MS Word .doc or .docx files."
 HOMEPAGE="http://latex2rtf.sourceforge.net/"
 SRC_URI="mirror://sourceforge/latex2rtf/${NAME}-${VERSION}.tar.gz"
+PATCH_URI="https://src.fedoraproject.org/cgit/rpms/latex2rtf.git/plain/latex2rtf-perl526.patch"
 
 REQUIRES="ghostscript ImageMagick texlive texlive-collection-latexrecommended"
 
